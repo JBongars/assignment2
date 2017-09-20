@@ -1,0 +1,61 @@
+<div class="col-lg-8 col-sm-12" ng-init="ctrl.initController()">
+    <h1>New Product</h1>
+
+    <form name="newProdForm" ng-submit="newProdForm.$valid && ctrl.newProduct()" novalidate>
+
+        <!--upc12-->
+        <div class="form-group">
+            <label for="upc12">upc12 </label>
+            <input id="upc12" name="upc12" type="number"  class="form-control" ng-model="ctrl.newProductObj.upc12" />
+            <div class="validation" data-ng-show="newProdForm.upc12.$touched || newProdForm.$submitted">
+                <div data-ng-show="newProdForm.upc12.$error">
+                    <span class="glyphicon glyphicon-alert"></span> upc12 is mandatory.
+                </div>
+                <div data-ng-show="newProdForm.upc12.$error.upc12">
+                    <span class="glyphicon glyphicon-alert"></span> upc12 is invalid.
+                </div>
+            </div>
+        </div>
+
+        <!--Name-->
+        <div class="form-group">
+            <label for="name">name </label>
+            <input id="name" name="name" type="text"  class="form-control" required ng-model="ctrl.newProductObj.name"
+            />
+            <div class="validation" data-ng-show="newProdForm.name.$touched || newProdForm.$submitted">
+                <div data-ng-show="newProdForm.name.$error">
+                    <span class="glyphicon glyphicon-alert"></span> name is mandatory.
+                </div>
+                <div data-ng-show="newProdForm.name.$error.name">
+                    <span class="glyphicon glyphicon-alert"></span> name is invalid.
+                </div>
+            </div>
+        </div>
+
+        <!--Brand-->
+        <div class="form-group">
+            <label for="brand">brand </label>
+            <input id="brand" name="brand" type="text"  class="form-control" required ng-model="ctrl.newProductObj.brand"
+            />
+            <div class="validation" data-ng-show="newProdForm.brand.$touched || newProdForm.$submitted">
+                <div data-ng-show="newProdForm.brand.$error">
+                    <span class="glyphicon glyphicon-alert"></span> brand is mandatory.
+                </div>
+                <div data-ng-show="newProdForm.brand.$error.brand">
+                    <span class="glyphicon glyphicon-alert"></span> brand is invalid.
+                </div>
+            </div>
+        </div>
+
+        <!--Submit-->
+        <div class="form-group">
+            <hr/>
+            <input id="submit" name="submit" type="submit" class="btn btn-success" />
+            <btn class="btn btn-warning">Cancel</btn>
+        </div>
+
+        <div ng-show="ctrl.showty">
+            <h2>Submitted!</h2>
+        </div>
+    </form>
+</div>

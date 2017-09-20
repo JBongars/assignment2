@@ -21,7 +21,6 @@ console.log = function(data)
     this.logCopy(dateTimeStamp + data);
 };
 
-
 //start instance of express
 var app = express();
 

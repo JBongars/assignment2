@@ -16,7 +16,7 @@ var pool = sql.createPool({
     port: 3306, //Server
     user: "superadmin",
     password: "password",
-    database: "sakila",
+    database: "assignment2",
     connectionLimit: 16
 })
 

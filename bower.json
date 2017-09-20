@@ -1,0 +1,24 @@
+{
+  "name": "assignment2",
+  "description": "online shop for assignment 2 - ISS FSF",
+  "main": "server/app.js",
+  "authors": [
+    "Julien Bongars"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3"
+  }
+}

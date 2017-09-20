@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 2</title>
 
-    <!--bower-->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
-    
-    <!--self-->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Entry Info</title>
+
+  <!--Bower Components-->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <!--Style-->
+  <link rel="stylesheet" href="/css/style.css" />
 
 </head>
-<body>
-    <div ui-view="nav" />
-    <div ui-view="main" />
+
+<body ng-cloak>
+  <div class="container" ng-controller="ProductCtrl as ctrl">
+
+    <!--View goes here-->
+    <div ui-view="nav"></div>
+    <div ui-view="main"></div>
+
+  </div>
+
 </body>
 
-    <!--bower-->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--Bower Components -->
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/underscore/underscore-min.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!--self-->
-    <script src="app.js"></script>
-    <script src="app.config.js"></script>
-    <script src="services/productCalls.js"></script>
-    <script src="controllers/products.ctrl.js"></script>
+<!--Scripts-->
+<script src="/js/app.js"></script>
+<script src="/js/app.config.js"></script>
+
+<!--self-->
+<script src="/js/services/product.svc.js"></script>
+<script src="/js/services/pager.svc.js"></script>
+
+<script src="/js/controllers/product.ctrl.js"></script>
 
 </html>

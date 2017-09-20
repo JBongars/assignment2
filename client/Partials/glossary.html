@@ -1,0 +1,43 @@
+<div ng-init="ctrl.initController()">
+  <table class="table table-hover" style="margin-top: 40px">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Name</th>
+        <th>upc12</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="product in ctrl.items">
+        <!--<img class="card-img-top" src="../images/test.jpg" width="100%" alt="Card image cap">-->
+        <td> {{product.brand}} </td>
+        <td> {{product.name}} </td>
+        <td> {{product.upc12}} </td>
+        <td> <a href="#!/product" class="btn" ng-click="ctrl.updateProduct = product"><i class="glyphicon glyphicon-pencil"></i></a></td>
+      </tr>
+    </tbody>
+
+  </table>
+  <div class="text-center">
+
+    <!-- pager -->
+    <ul ng-if="items.pager.pages.length" class="pagination">
+      <li ng-class="{disabled:items.pager.currentPage === 1}">
+        <a ng-click="items.setPage(1)">First</a>
+      </li>
+      <li ng-class="{disabled:items.pager.currentPage === 1}">
+        <a ng-click="items.setPage(items.pager.currentPage - 1)">Previous</a>
+      </li>
+      <li ng-repeat="page in items.pager.pages" ng-class="{active:items.pager.currentPage === page}">
+        <a ng-click="items.setPage(page)">{{page}}</a>
+      </li>
+      <li ng-class="{disabled:items.pager.currentPage === items.pager.totalPages}">
+        <a ng-click="items.setPage(items.pager.currentPage + 1)">Next</a>
+      </li>
+      <li ng-class="{disabled:items.pager.currentPage === items.pager.totalPages}">
+        <a ng-click="items.setPage(items.pager.totalPages)">Last</a>
+      </li>
+    </ul>
+  </div>
+</div>

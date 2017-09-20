@@ -1,0 +1,13 @@
+
+
+.card-container {
+    margin: auto;
+    display: inline-block;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    width: 20em;
+}
+

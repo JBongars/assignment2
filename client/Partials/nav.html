@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header col-sm-3 col-md-3">
+        <a class="navbar-brand" href="#">Products</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <!--<li class="active"><a href="#">Home</a></li>-->
+        <li><a href="#!/glossary">Glossary</a></li>
+        <li><a href="#!/addproduct">New Product</a></li>
+      </ul>
+
+      <div class="col-sm-3 col-md-3 pull-right">
+          <form class="navbar-form" role="search">
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <label class="checkbox-inline"><input type="checkbox" name="name" ng-model="ctrl.name" />Name</label>
+            <label class="checkbox-inline"><input type="checkbox" name="brand" ng-model="ctrl.brand" />Brand</label>
+          </div>
+          </form>
+      </div>
+    </div>
+  </nav>

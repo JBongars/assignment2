@@ -1,0 +1,21 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "online shop for assignment 2 - ISS FSF",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/JBongars/assignment2.git"
+  },
+  "author": "Julien Bongars",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mysql": "^2.14.1",
+    "path": "^0.12.7"
+  }
+}
